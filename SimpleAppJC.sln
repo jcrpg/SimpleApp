@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAppJC", "SimpleAppJC\SimpleAppJC.csproj", "{59020AFA-5D07-4C9E-829B-FD4565BA6F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAppJC.Tests", "SimpleAppJC.Tests\SimpleAppJC.Tests.csproj", "{86A7D7A4-27AC-44B0-865B-7E4A65E37404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59020AFA-5D07-4C9E-829B-FD4565BA6F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59020AFA-5D07-4C9E-829B-FD4565BA6F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59020AFA-5D07-4C9E-829B-FD4565BA6F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59020AFA-5D07-4C9E-829B-FD4565BA6F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A7D7A4-27AC-44B0-865B-7E4A65E37404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A7D7A4-27AC-44B0-865B-7E4A65E37404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A7D7A4-27AC-44B0-865B-7E4A65E37404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A7D7A4-27AC-44B0-865B-7E4A65E37404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
