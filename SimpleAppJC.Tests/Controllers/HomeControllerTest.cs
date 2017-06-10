@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SimpleAppJC;
-using SimpleAppJC.Controllers;
+using SimpleAppJc;
+using SimpleAppJc.Controllers;
 
-namespace SimpleAppJC.Tests.Controllers
+namespace SimpleAppJc.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

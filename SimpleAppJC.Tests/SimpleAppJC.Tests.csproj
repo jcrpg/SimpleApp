@@ -91,9 +91,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleAppJC\SimpleAppJC.csproj">
-      <Project>{59020AFA-5D07-4C9E-829B-FD4565BA6F08}</Project>
-      <Name>SimpleAppJC</Name>
+    <ProjectReference Include="..\SimpleAppJC\SimpleAppJc.csproj">
+      <Project>{59020afa-5d07-4c9e-829b-fd4565ba6f08}</Project>
+      <Name>SimpleAppJc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
