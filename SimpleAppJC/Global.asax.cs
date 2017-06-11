@@ -17,6 +17,10 @@ namespace SimpleAppJc
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //initialize DI
+            Bootstrapper.Initialise();
+
         }
     }
 }

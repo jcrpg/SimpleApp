@@ -4,7 +4,6 @@ using Unity.Mvc4;
 using SimpleAppJc.Domain;
 using SimpleAppJc.Service.Interfaces;
 using SimpleAppJc.Repository;
-
 namespace SimpleAppJc
 {
   public static class Bootstrapper
@@ -12,9 +11,7 @@ namespace SimpleAppJc
     public static IUnityContainer Initialise()
     {
       var container = BuildUnityContainer();
-
-      container.RegisterType<ICarService, CarRepository>();
-
+            
       DependencyResolver.SetResolver(new UnityDependencyResolver(container));
 
       return container;
@@ -24,11 +21,11 @@ namespace SimpleAppJc
     {
       var container = new UnityContainer();
 
-      // register all your components with the container here
-      // it is NOT necessary to register your controllers
-
-      // e.g. container.RegisterType<ITestService, TestService>();    
-      RegisterTypes(container);
+            // register all your components with the container here
+            // it is NOT necessary to register your controllers
+            container.RegisterType<ICarService, CarRepository>();
+            // e.g. container.RegisterType<ITestService, TestService>();    
+            RegisterTypes(container);
 
       return container;
     }

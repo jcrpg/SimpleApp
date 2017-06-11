@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using SimpleAppJc.Service.Interfaces;
 
-namespace SimpleAppJc.Service.Implements
+namespace SimpleAppJc.Service.Implementations
 {
     public class FileLogService : ILogService
     {
