@@ -10,22 +10,22 @@ namespace SimpleAppJc.Repository
 {
     public class LogRepository : ILogService
     {
-        //private readonly ILog _logger;
-        //private  readonly ILog _logger;
         private readonly log4net.ILog _logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        //private readonly ILog _logger;
+
         public LogRepository(ILog logger) {
             _logger = logger;
         }
         public LogRepository() { }
-        //public LogRepository(ILog logger)
-        //{
-        //    this._logger = logger;
-        //}
+
         public void fileLogging()
         {
             //_logger.fileLogging();
             _logger.Info("testing");
+        }
+
+        public void saveEnquiryToFile()
+        {
+            throw new NotImplementedException();
         }
     }
 }

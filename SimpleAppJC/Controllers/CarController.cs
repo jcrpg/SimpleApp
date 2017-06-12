@@ -23,9 +23,14 @@ namespace SimpleAppJc.Controllers
 
             LogRepository myClass = new LogRepository();
 
+            //Test file logging
             myClass.fileLogging();
 
             return View(data);
+        }
+        public JsonResult GetAllCars()
+        {
+            return Json(_carService.GetAll(), JsonRequestBehavior.AllowGet);
         }
     }
 }

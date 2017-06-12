@@ -9,17 +9,11 @@ namespace SimpleAppJc.Repository
 {
     public class CarRepository : ICarService
     {
+        private List<Car> _cars = new List<Car>();
+
         public CarRepository()
         {
-        }
-        public SimpleAppJc.Domain.Car Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<SimpleAppJc.Domain.Car> GetAll()
-        {
-            List<Car> newLists = new List<Car>
+            _cars = new List<Car>
             {
                 new Car{CarId=1,Model="Mazada 2",Make="Mazda", Year=2017,PriceType="POA",Abn=null,ContactName="Jung Chen",Phone="0412000111",Email="jung.chen@invalidemail.com",DapPrice=null,EgcPrice=null,Comments="looking to sell by a set date"},
                 new Car{CarId=2,Model="Outlander",Make="Mitsubishi", Year=2017,PriceType="POA",Abn=null,ContactName="Jung Chen2",Phone="0412000112",Email="jung.chen2@invalidemail.com",DapPrice=null,EgcPrice=null,Comments="With highly advanced safety and entertainment technology, the sleek and stylish Mitsubishi Outlander takes care of your team in every way.  With generous cabin and luggage space, 2WD or AWD and a choice of 5 or 7 seats, this family SUV has your whole team covered. Outlander from Mitsubishi’s ever-reliable SUV range.Built for the time of your life"},
@@ -31,8 +25,15 @@ namespace SimpleAppJc.Repository
                 new Car{CarId=8,Model="Accord",Make="Honda", Year=2017,PriceType="DAP",Abn=null,ContactName=null,Phone=null,Email="jung.chen8@invalidemail.com",DapPrice=52590,EgcPrice=null,Comments="4 Door Sedan 6 Cylinder, 3.5 Litre Sports Automatic, Front Wheel Drive Petrol - Unleaded ULP 9.3 L/100km"},
                 new Car{CarId=9,Model="Grand Cherokee",Make="JEEP", Year=2017,PriceType="POA",Abn=null,ContactName="Jung Chen9",Phone="0412000119",Email="jung.chen9@invalidemail.com",DapPrice=null,EgcPrice=null,Comments="5 Door SUV 8 Cylinder, 6.4 Litre Sports Automatic, 4X4 On Demand Petrol - Premium ULP 14 L/100km"}
             };
+        }
+        public SimpleAppJc.Domain.Car Get(int id)
+        {
+            return _cars.Find(c => c.CarId == id);
+        }
 
-            return newLists;
+        public IEnumerable<SimpleAppJc.Domain.Car> GetAll()
+        {
+            return _cars;
         }
 
         public bool isEnquiryRecorded(Enquiry enquiry)

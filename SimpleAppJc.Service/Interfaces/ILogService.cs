@@ -9,5 +9,7 @@ namespace SimpleAppJc.Service.Interfaces
     public interface ILogService
     {
         void fileLogging();
+
+        void saveEnquiryToFile();
     }
 }
