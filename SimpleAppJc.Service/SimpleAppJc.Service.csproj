@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementations\FileLogService.cs" />
     <Compile Include="Interfaces\ICarService.cs" />
     <Compile Include="Interfaces\ILogService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

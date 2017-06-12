@@ -4,6 +4,8 @@ using Unity.Mvc4;
 using SimpleAppJc.Domain;
 using SimpleAppJc.Service.Interfaces;
 using SimpleAppJc.Repository;
+using UnityLog4NetExtension.Log4Net;
+using SimpleAppJc.Implementations;
 namespace SimpleAppJc
 {
   public static class Bootstrapper
@@ -24,7 +26,9 @@ namespace SimpleAppJc
             // register all your components with the container here
             // it is NOT necessary to register your controllers
             container.RegisterType<ICarService, CarRepository>();
-            // e.g. container.RegisterType<ITestService, TestService>();    
+            container.AddNewExtension<LogInit>();
+            container.AddNewExtension<Log4NetExtension>();
+
             RegisterTypes(container);
 
       return container;

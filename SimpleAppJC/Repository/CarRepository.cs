@@ -9,11 +9,8 @@ namespace SimpleAppJc.Repository
 {
     public class CarRepository : ICarService
     {
-        private readonly ILogService _log;
-
         public CarRepository()
         {
-            //_log = log;
         }
         public SimpleAppJc.Domain.Car Get(int id)
         {

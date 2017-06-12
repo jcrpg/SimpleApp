@@ -8,6 +8,6 @@ namespace SimpleAppJc.Service.Interfaces
 {
     public interface ILogService
     {
-        bool isFileSaved();
+        void fileLogging();
     }
 }

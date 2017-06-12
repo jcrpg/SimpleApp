@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SimpleAppJc.Service.Interfaces;
+using SimpleAppJc.Repository;
 
 namespace SimpleAppJc.Controllers
 {
@@ -19,6 +20,10 @@ namespace SimpleAppJc.Controllers
         public ActionResult Index()
         {
             var data = _carService.GetAll();
+
+            LogRepository myClass = new LogRepository();
+
+            myClass.fileLogging();
 
             return View(data);
         }

@@ -7,6 +7,7 @@ using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleAppJc.Service.Interfaces;
 using SimpleAppJc.Repository;
+
 namespace SimpleAppJC.Tests
 {
     [TestClass]

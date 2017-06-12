@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAppJc", "SimpleAppJC\SimpleAppJc.csproj", "{59020AFA-5D07-4C9E-829B-FD4565BA6F08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAppJc.Website", "SimpleAppJC\SimpleAppJc.Website.csproj", "{59020AFA-5D07-4C9E-829B-FD4565BA6F08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAppJC.Tests", "SimpleAppJC.Tests\SimpleAppJC.Tests.csproj", "{86A7D7A4-27AC-44B0-865B-7E4A65E37404}"
 EndProject

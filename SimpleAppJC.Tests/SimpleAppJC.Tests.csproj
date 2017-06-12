@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -97,6 +100,9 @@
     <Reference Include="Unity.Mvc5, Version=1.2.3.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.Mvc5.1.2.3\lib\net45\Unity.Mvc5.dll</HintPath>
     </Reference>
+    <Reference Include="UnityLog4NetExtension, Version=2.0.1.0, Culture=neutral, PublicKeyToken=4f2e406647ebdbb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\UnityLog4NetExtension.2.0.1.0\lib\net45\UnityLog4NetExtension.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
@@ -104,6 +110,7 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="LogTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnityTest.cs" />
   </ItemGroup>
@@ -122,11 +129,12 @@
       <Project>{c18e0e2a-1719-4af9-9db6-6a6b4a584e61}</Project>
       <Name>SimpleAppJc.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SimpleAppJC\SimpleAppJc.csproj">
+    <ProjectReference Include="..\SimpleAppJC\SimpleAppJc.Website.csproj">
       <Project>{59020afa-5d07-4c9e-829b-fd4565ba6f08}</Project>
-      <Name>SimpleAppJc</Name>
+      <Name>SimpleAppJc.Website</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
