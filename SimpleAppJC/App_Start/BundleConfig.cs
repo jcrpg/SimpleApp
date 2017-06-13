@@ -26,6 +26,18 @@ namespace SimpleAppJc
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/common").Include(
+                      "~/Content/simpleAppJc.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/knockoffjs").Include(
+                      "~/Scripts/knockout-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/carjs").Include(
+                      "~/Scripts/site/Ajax.js",
+                      "~/Scripts/site/Model.js",
+                      "~/Scripts/site/CommonController.js"
+                      ));
         }
     }
 }

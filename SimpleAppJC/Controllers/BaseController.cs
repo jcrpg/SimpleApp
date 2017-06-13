@@ -11,9 +11,9 @@ namespace SimpleAppJc.Controllers
         // GET: Base
         protected override void OnException(ExceptionContext filterContext)
         {
+            //I was going to add security but decided to leave it for the time being
             if (filterContext.HttpContext.User != null && filterContext.HttpContext.User.Identity.IsAuthenticated && !ControllerContext.IsChildAction)
             {
-                //This performs a global check, to ensure the default system generated password is changed on first login.
                 var routeAction = filterContext.RouteData.Values["action"] != null ? filterContext.RouteData.Values["action"].ToString() : String.Empty;
 
                 

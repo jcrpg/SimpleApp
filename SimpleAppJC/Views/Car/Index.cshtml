@@ -2,39 +2,50 @@
 @{
     ViewBag.Title = "Display a list of car";
 }
+@section Scripts {
+    <script src="~/Scripts/site/CarModel.js"></script>
+    <script src="~/Scripts/site/EnquiryModel.js"></script>
+    <script src="~/Scripts/site/ThankYouModel.js"></script>
+    <script src="~/Scripts/site/CarController.js"></script>
+    <script src="~/Scripts/site/EnquiryController.js"></script>
+}
 
-<div class="jumbotron">
 
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        @if (Model.Count > 0)
-        {
-            <table>
-                <thead>
-                    <tr>
-                        <th>View</th>
-                        <th>Mark</th>
-                        <th>Model</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@Html.ActionLink("Details","Details","Car",new {id=item.CarId},null) </td>
-                            <td>@item.Make</td>
-                            <td>@item.Model</td>
-                            <td>@item.Year</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
+<div class="col-sm-12">
+    <div id="categories" class="col-sm-3">
+        <button class="btn btn-block btn-default btn-lg"
+                data-bind="click: setCategory.bind(null)">
+            View full list
+        </button>
 
     </div>
+    <div class="col-sm-2">
+
+        <h4>Select a Type:</h4>
+    </div>
+    <div class="col-sm-7">
+        <div data-bind="foreach: carModel.carCategories()">
+            <div class="col-sm-2">
+                <button class="btn btn-block btn-default btn-lg"
+                        data-bind="click: setCategory.bind($data), text: $data,
+                    css: {'btn-primary': $data ==carModel.selectedCategory()}"></button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<div class="alert alert-danger col-sm-12"
+     data-bind="visible: model.gotError(), text: model.error()">
+</div>
+<div data-bind="visible:enquiryModel.currentView()=='enquiry'">
+    @Html.Partial("ContactForm")
+</div>
+<div data-bind="visible:carModel.currentView()=='list'">
+    @Html.Partial("CarList")
+</div>
+@*<div data-bind="visible:thankYouModel.currentView()=='thankyou'">
+    @Html.Partial("ThankYou")
+</div>*@
+
 
 

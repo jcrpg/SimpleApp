@@ -192,6 +192,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\simpleAppJc.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -222,6 +223,14 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\site\Ajax.js" />
+    <Content Include="Scripts\site\CarController.js" />
+    <Content Include="Scripts\site\CarModel.js" />
+    <Content Include="Scripts\site\CommonController.js" />
+    <Content Include="Scripts\site\EnquiryController.js" />
+    <Content Include="Scripts\site\EnquiryModel.js" />
+    <Content Include="Scripts\site\Model.js" />
+    <Content Include="Scripts\site\ThankYouModel.js" />
     <Content Include="Unity.Mvc4.README.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -238,6 +247,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Car\Index.cshtml" />
+    <Content Include="Views\Car\CarList.cshtml" />
+    <Content Include="Views\Car\ContactForm.cshtml" />
+    <Content Include="Views\Car\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

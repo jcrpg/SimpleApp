@@ -32,5 +32,11 @@ namespace SimpleAppJc.Controllers
         {
             return Json(_carService.GetAll(), JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult Details(int Id)
+        {
+
+            return View();
+        }
     }
 }

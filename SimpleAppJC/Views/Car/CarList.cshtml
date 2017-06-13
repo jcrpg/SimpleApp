@@ -1,0 +1,32 @@
+﻿
+<div class="col-sm-12">
+
+    <div data-bind="foreach: carModel.filteredCars()">
+        <div class="col-sm-12">
+            <div>
+                <strong>Make:</strong><span data-bind="text: $data.Make"> </span>
+            </div>
+            <div>
+                <strong>Model:</strong><span data-bind="text: $data.Model"> </span>
+            </div>
+            <div data-bind="if: EgcPrice">
+                <strong>Exclude Government Charge:</strong><span data-bind="text: ('$' + $data.EgcPrice.toFixed(2))"> </span>
+            </div>
+            <div data-bind="if: DapPrice">
+                <strong>Drive away price:</strong><span data-bind="text:('$' + $data.DapPrice.toFixed(2))"> </span>
+            </div>
+            <div data-bind="if: ContactName">
+                <strong>Contact Name:</strong><span data-bind="text: $data.ContactName"> </span>
+            </div>
+            <div data-bind="if: Phone">
+                <strong>Phone:</strong><span data-bind="text: $data.Phone"> </span>
+            </div>
+            <div>
+                <button class="btn btn-success" data-bind="click: addToEnquiry">
+                    View 
+                </button>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>

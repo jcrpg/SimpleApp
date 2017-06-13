@@ -1,0 +1,15 @@
+﻿
+
+<div data-bind="foreach: thankYouModel.car()">
+    <h1>Enquiry Sent</h1>
+
+    <div class="col-lg-12">
+        <div class="label">
+            One of our friendly consultants will be in touch with you.
+        </div>
+    </div>
+    <button class="btn btn-primary"
+            data-bind="click: setView.bind($data, 'list')">
+        Go back
+    </button>
+</div>
