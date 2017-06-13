@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleAppJc.Domain;
 
 namespace SimpleAppJc.Service.Interfaces
 {
@@ -10,6 +11,6 @@ namespace SimpleAppJc.Service.Interfaces
     {
         void fileLogging();
 
-        void saveEnquiryToFile();
+        void saveEnquiryToFile(CarViewModel car);
     }
 }

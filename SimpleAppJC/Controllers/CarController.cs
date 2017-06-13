@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using SimpleAppJc.Service.Interfaces;
 using SimpleAppJc.Repository;
+using SimpleAppJc.Domain;
+
 
 namespace SimpleAppJc.Controllers
 {
@@ -33,10 +35,26 @@ namespace SimpleAppJc.Controllers
             return Json(_carService.GetAll(), JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult Details(int Id)
-        {
+   
+        [HttpGet]
+        public JsonResult saveEnquiry(string firstname,string lastname, string email,
+            string make,string model,string carid) {
 
-            return View();
+            LogRepository myClass = new LogRepository();
+            var viewModel = new CarViewModel
+            {
+                carid = carid,
+                firstname = firstname,
+                lastname = lastname,
+                email = email,
+                make = make,
+                model = model
+            };
+
+            myClass.saveEnquiryToFile(viewModel);
+
+
+            return Json(new { Status = true }, JsonRequestBehavior.AllowGet);
         }
     }
 }

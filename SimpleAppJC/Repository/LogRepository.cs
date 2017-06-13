@@ -5,6 +5,7 @@ using System.Web;
 using SimpleAppJc.Service.Interfaces;
 using log4net;
 using UnityLog4NetExtension.CreationStackTracker;
+using SimpleAppJc.Domain;
 
 namespace SimpleAppJc.Repository
 {
@@ -23,9 +24,13 @@ namespace SimpleAppJc.Repository
             _logger.Info("testing");
         }
 
-        public void saveEnquiryToFile()
+        public void saveEnquiryToFile(CarViewModel car)
         {
-            throw new NotImplementedException();
+            _logger.Info("Make: " + car.make +", Model:" + car.model+
+                ", contact first name:" + car.firstname + 
+                ",contact last name:" + car.lastname + 
+                ", email:" + car.email + ",car id:" + car.carid);
+
         }
     }
 }
