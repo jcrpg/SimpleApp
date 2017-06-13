@@ -1,6 +1,5 @@
 ﻿
 var sendEnquiry = function (item) {
-    //alert('Name' + document.getElementsByName("firstName"));
     var firstName = document.getElementById("firstname").value;
     var lastName = document.getElementById("lastname").value;
     var email = document.getElementById("email").value;
@@ -11,9 +10,6 @@ var sendEnquiry = function (item) {
         setView("enquiry");
 
     } else {
-        //Please note I didn't get the chance to include the name & email in the 
-        //viewModel hence it's not passing throug to the json result in the controller
-        //I could pass all the string parameters but I wouldn't normally do that
         $.ajax({
             url: '/car/SaveEnquiry',
             cache: false,

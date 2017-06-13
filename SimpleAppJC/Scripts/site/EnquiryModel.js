@@ -4,7 +4,6 @@
 };
 
 
-//ko.applyBindings(new enquiryModel);
 var initialData = [
     {
         firstName: "", lastName: "", email: ""
@@ -28,4 +27,3 @@ var viewModels = {
 }
 
 ko.applyBindings(contactsModel(initialData), document.getElementById("contactsList")); 
-//ko.applyBindings(new viewModels);

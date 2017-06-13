@@ -4,4 +4,3 @@
 
 }
 
-//ko.applyBindings(new thankYouModel);
